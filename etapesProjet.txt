@@ -1,0 +1,6 @@
+1- Configuration raspbery pi
+2- Hello World (afichage)
+3- Communication wifi PC->Raspberry
+4- Envoie ecran PC->Raspberry
+5- Idem avec blutooth
+6- Idem sur android
