@@ -1,0 +1,5 @@
+librairies erquired:
+
+Numpy: pip install numpy
+OpenCV (cv2): pip install opencv-python
+mss: pip install mss
