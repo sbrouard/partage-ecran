@@ -15,8 +15,12 @@ Run `./server.sh` on the device whose screen you want to stream
 
 ### Client
 
-Run `./client.sh` on the device to use to see server's screen
+Run `./client.sh ip port` on the device to use to see server's screen.
+With 'ip' and 'port' the server ip and server port used for the screen streaming
 
+### Important note
+
+Run the server before the client, otherwise, the client won't be able to connect to the server and will exit immediatly.
 
 
 
