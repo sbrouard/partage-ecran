@@ -1,8 +1,8 @@
 import socket,sys,cPickle
-#import sys 
 
 from getScreenShot import getPixels
 from getConfig import getMaxPacketLength
+from sendDatagram import sendDatagram
 
 # create dgram udp socket
 try:
@@ -23,6 +23,9 @@ while(1) :
     # Serialize it, to send it y the socket
     arr = ((size[0],size[1]),pixels)
     msg = cPickle.dumps(arr)
+
+
+    sendDatagram(msg,udpLength,host,port)
     
     try :
         #Set the message

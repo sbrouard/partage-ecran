@@ -3,3 +3,23 @@ librairies erquired:
 Numpy: pip install numpy
 OpenCV (cv2): pip install opencv-python
 mss: pip install mss
+
+
+
+
+
+ffmpeg:
+-------
+sudo add-apt-repository ppa:mc3man/trusty-media
+sudo apt-get update
+sudo apt-get install ffmpeg
+
+* screencast: 
+   ffmpeg -video_size 1600x900 -framerate 30 -f x11grab -i :1 -c:v libx264 -qp 0 -preset ultrafast capture.mkv
+
+* screenstream:
+   server:
+	ffmpeg     -f x11grab -s 1280x720 -framerate 30 -i :1     -c:v libx264 -preset veryfast -tune zerolatency -pix_fmt yuv444p     -x264opts crf=20:vbv-maxrate=3000:vbv-bufsize=100:intra-refresh=1:slice-max-size=1500:keyint=30:ref=1     -f mpegts - | nc -l -p 9000
+   client:
+	nc 127.0.0.1 9000 | mplayer -benchmark -
+	(installer mplayer)
