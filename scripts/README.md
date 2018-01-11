@@ -32,3 +32,9 @@ TODO
 -Automatiser (valeur en argument du script plutot qu'en dur, puis detecter les valeurs adéquates automatiquement)
 -Adapter: rendre tout ca compatible avec le plus d'appareils possible
 -Creer un app: transformer les scripts en code (parce que 2-3 scripts c'est pas une app d'après ~fmorandat)
+
+
+NOTES
+=====
+-Lancer un scrit au boot:
+	Dans /etc/rc.local ajouter `bash /absulutepath/script' &`
