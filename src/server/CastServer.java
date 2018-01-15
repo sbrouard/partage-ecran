@@ -4,38 +4,29 @@ import java.awt.Toolkit;
 import java.awt.Dimension;
 
 public class CastServer{
-
-  
-    
-
-    
+   
     public static void main(String[] args){
+	// Get screen size
 	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-	int screenHeight = (int) screenSize.getHeight();
-	int screenWidth = (int) screenSize.getWidth();
+	String screenHeight = ""+(int) screenSize.getHeight();
+	String screenWidth = ""+(int) screenSize.getWidth();
 
+	
+	//System.out.println("Make sure you're connected to the wifi hotspot you want to share your screen with.\n");
+	//System.out.println("Start streaming, waiting for the client connection ...\n");
+	
 	try {
 
-	    //String[] env = {"PATH=/bin:/usr/bin/"};
-	    String cmd = "/home/sbrouard/Documents/partage-ecran/scripts/server.sh";
-	    Process proc = Runtime.getRuntime().exec(cmd);//, env);
-
-
-
-	    proc.waitFor();
-	    /*StringBuffer output = new StringBuffer();
-	    BufferedReader reader = new BufferedReader(new InputStreamReader(proc.getInputStream()));
-	    String line = "";                       
-	    while ((line = reader.readLine())!= null) {
-		output.append(line + "\n");
-	    }
-	    System.out.println("### " + output);
-	    */
+	    // run script
+	    String script = "../../scripts/server.sh";
+	    String[] cmd = {script,screenWidth,screenHeight};
+	    Process proc = Runtime.getRuntime().exec(cmd);
 	    
-	    //Runtime.getRuntime().exec("../../scripts/server.sh");
-	    //Process p = new ProcessBuilder("../../scripts/server.sh").start();
-
-		} catch (Exception ex) {
+	    proc.waitFor();
+	    //System.out.println("Streaming\n");
+	    
+	} catch (Exception ex) {
+	    //System.out.println("Connection failed\n");
 	    ex.printStackTrace();
 	}
     }
