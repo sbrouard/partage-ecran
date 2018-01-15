@@ -5,3 +5,4 @@ if [ "$#" -ne 2 ]; then
 else
     nc $1 $2 | mplayer - 
 fi
+exit 0
