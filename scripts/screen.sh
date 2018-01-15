@@ -5,7 +5,8 @@ do
   ping 10.3.141.50 -c 3
   if [ $? == 0 ] 
 	then
-		./client.sh 10.3.141.50 9000
+	    sh ./client.sh 10.3.141.50 9000 &
+	    echo $?
    fi
    sleep 1
 done
