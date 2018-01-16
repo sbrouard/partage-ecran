@@ -8,8 +8,10 @@ Le PC communique par l'intermédaire du Wifi avec un raspberry pi connecté au p
 Les scripts utilisés se trouvent dans le dossier `scripts`.
 Les sources pour le serveur sur trouvent dans le dossier `src/server`
 
-Pour démarrer le cast le client doit se connecter au réseau wifi de la Raspberry (rasp-webgui mdp : ChangeMe) puis
+Pour démarrer le cast l'appareil doit se connecter au réseau wifi de la Raspberry (rasp-webgui mdp : ChangeMe) puis
+
 javac src/server/CastServer.java
+
 java src/server/CastServer
 
 
