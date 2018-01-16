@@ -1,8 +1,16 @@
 Projection ecran PC et Android via Wifi et Bluetooth
 =======================================================
 
-Le but de ce projet est de créer une (ou plusieurs) appplication(s) pour PC et Android permettant à un utilisateur de projetter son écran sans connection filaire.
-Le PC (ou l'Android) communique par l'intermédaire de technologies sans fil (Wifi ou Bluetooth) avec un raspberry pi connecté au projecteur.
+Le but de ce projet est de créer une  appplication pour PC permettant à un utilisateur de projetter son écran sans connection filaire.
+Le PC communique par l'intermédaire du Wifi avec un raspberry pi connecté au projecteur.
 
-Configuration du raspberry Pi
----------------------------------
+
+Les scripts utilisés se trouvent dans le dossier `scripts`.
+Les sources pour le serveur sur trouvent dans le dossier `src/server`
+
+
+Installation
+------------
+
+* Le serveur doit installer ffmpeg
+* Le client doit installer mplayer
