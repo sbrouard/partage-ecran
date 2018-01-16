@@ -1,4 +1,4 @@
-Projection ecran PC et Android via Wifi 
+Projection ecran PC via Wifi 
 =======================================================
 
 Le but de ce projet est de créer une  appplication pour PC permettant à un utilisateur de projetter son écran sans connection filaire.
